@@ -13,6 +13,6 @@ class TestAddition(unittest.TestCase):
 
         # Assertion pour vérifier si le résultat est conforme à ce qui est attendu
         self.assertEqual(result, 9, "Le résultat attendu est 9")
-        
+# execution des tests        
 test_addition = unittest.TestLoader().loadTestsFromTestCase(TestAddition)
 unittest.TextTestRunner().run(test_addition)

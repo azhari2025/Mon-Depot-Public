@@ -1,0 +1,18 @@
+import unittest
+
+# Fonction à tester
+def multiplication(a, b):
+    return a * b
+
+# Classe de test
+class TestMultiplication(unittest.TestCase):
+
+    def test_muliplication(self):
+        # Appel de la fonction à tester
+        # Assertion pour vérifier si le résultat est conforme à ce qui est attendu
+        self.assertEqual(multiplication(4, 5), 20, "Le résultat attendu est 20")
+        self.assertEqual(multiplication(0, 5), 0, "Le résultat attendu est 0")
+        self.assertEqual(multiplication(-2, -5), 10, "Le résultat attendu est 10")
+# execution des tests        
+test_muliplication = unittest.TestLoader().loadTestsFromTestCase(TestMultiplication)
+unittest.TextTestRunner().run(test_muliplication)
